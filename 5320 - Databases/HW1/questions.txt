@@ -1,0 +1,12 @@
+id,text,user,rank,date:
+1,How do you code MySQL,1,10,2013-01-20
+2,How do you code Java?,1,6,2013-05-05
+3,Philosophy question,3,0,2013-08-08
+4,NodeJS question,3,20,2013-12-12
+5,Why is MySQL better than PostgreSQL,1,7,2014-01-02
+6,MySQL design question,2,5,2014-02-10
+7,Angular design,3,18,2014-04-14
+8,Java JDBC question,2,3,2014-06-30
+9,Why do people code in Python?,2,1,2014-09-19
+10,Code MySQL Java PostGres Philosophy?,5,8,2014-09-19
+11,Automated robot question,4,4,2014-09-20
