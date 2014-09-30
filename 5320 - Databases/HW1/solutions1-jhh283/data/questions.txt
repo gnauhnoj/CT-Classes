@@ -6,7 +6,7 @@ id,text,user,rank,date:
 5,Why is MySQL better than PostgreSQL,1,7,2014-01-02
 6,MySQL design question,2,5,2014-02-10
 7,Angular design,3,18,2014-04-14
-8,Java JDBC question,2,3,2014-06-30
+8,JDBC question,2,3,2014-06-30
 9,Why do people code in Python?,2,1,2014-09-19
 10,Code MySQL Java PostGres Philosophy?,5,8,2014-09-19
 11,Automated robot question,4,4,2014-09-20
