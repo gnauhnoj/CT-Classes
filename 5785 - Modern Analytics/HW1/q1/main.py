@@ -1,5 +1,5 @@
 import numpy as np
-import retrieve 
+import retrieve
 import outlier
 import util
 
@@ -31,11 +31,11 @@ if __name__ == '__main__':
   ## plot the graphs
   # part c
   # axis dictionary, plot
-  # import plot
-  # axeslabels = ['Trip Time (sec)', 'Trip Distance (mi)', 'Pickup Time (hours)', 'Distance between Pickup & Dropoff (mi)']
-  # plot.plot_data(data, axeslabels)
+  import plot
+  axeslabels = ['Trip Time (sec)', 'Trip Distance (mi)', 'Pickup Time (hours)', 'Distance between Pickup & Dropoff (mi)']
+  plot.plot_data(data, axeslabels)
 
-  ## separating independent variables 
+  ## separating independent variables
   # part d & f
   xtrain = training[:,1]
   xtest = test[:,1]
