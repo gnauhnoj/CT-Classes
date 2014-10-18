@@ -1,0 +1,8 @@
+# Directed graph (each unordered pair of nodes is saved once): roadNet-CA.txt 
+# California road network
+# Nodes: 1965206 Edges: 5533214
+# FromNodeId	ToNodeId
+0	1
+0	2
+0	469
+1	0
