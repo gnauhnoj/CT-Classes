@@ -19,8 +19,8 @@ public class NetworkAnalysis {
         ResultSet rs = null;
         Integer input = null;
 
-        String db = "roadNetwork";
-        String table = "roadNodes";
+        String db = "Network";
+        String table = "Nodes";
 
         String func = args[0];
         if (args.length > 1) {
@@ -36,7 +36,10 @@ public class NetworkAnalysis {
                 stmt = helpers.NeighbourCount(stmt, input);
             } else if (func.equals("ReachabilityCount")) {
                 stmt = helpers.ReachabilityCount(stmt, input);
-
+            } else if (func.equals("DiscoverCliques")) {
+                stmt = helpers.DiscoverCliques(stmt, input);
+            } else if (func.equals("NetworkDiameter")) {
+                stmt = helpers.NetworkDiameter(stmt);
             } else {
                 err.format("Usage: NetworkAnalysis <classname> not found");
             }

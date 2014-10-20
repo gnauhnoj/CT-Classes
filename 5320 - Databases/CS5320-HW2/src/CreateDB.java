@@ -31,8 +31,8 @@ public class CreateDB {
         Statement stmt = null;
         ResultSet rs = null;
 
-        String db = "roadNetwork";
-        String table = "roadNodes";
+        String db = "Network";
+        String table = "Nodes";
         String schemaQuery = "CREATE TABLE " + table +
                         " (FromNode int NOT NULL, " +
                         " ToNode int NOT NULL)";
@@ -53,6 +53,9 @@ public class CreateDB {
                     + table + " FIELDS TERMINATED BY '\\t' " +
                     "LINES TERMINATED BY '\\n' " +
                     "IGNORE 4 LINES");
+
+            stmt.executeUpdate("CREATE TABLE Undirected AS (select t1.fromNode, t1.toNode from " +
+                     "Nodes t1 join Nodes t2 on t1.fromNode = t2.toNode)");
         }
         catch (SQLException e) {e.printStackTrace();}
         catch (Exception e) {e.printStackTrace();}
