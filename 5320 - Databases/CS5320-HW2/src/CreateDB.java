@@ -17,12 +17,11 @@ public class CreateDB {
         return stmt;
     }
     private static Statement createTable(Statement stmt, String table, String schemaQuery) throws Exception {
-        try {
-            stmt.executeUpdate("DROP TABLE " + table);
-        } catch(Exception e){
-            System.out.print(e);
-        }
-
+//        try {
+//            stmt.executeUpdate("DROP TABLE " + table);
+//        } catch(Exception e){
+//            System.out.print("table already dropped");
+//        }
         stmt.executeUpdate(schemaQuery);
         return stmt;
     }
