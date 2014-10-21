@@ -26,7 +26,7 @@
       <file leaf-file-name="NetworkAnalysis.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/NetworkAnalysis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="825">
+            <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="885">
               <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
               <folding />
             </state>
@@ -36,7 +36,7 @@
       <file leaf-file-name="JDBCutils.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JDBCutils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="630">
               <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
               <folding />
             </state>
@@ -46,19 +46,21 @@
       <file leaf-file-name="helpers.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/helpers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6620776" vertical-offset="791" max-vertical-offset="1590">
-              <caret line="169" column="21" selection-start-line="169" selection-start-column="21" selection-end-line="169" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.84981227" vertical-offset="41" max-vertical-offset="840">
+              <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#NodeExists#0;class#helpers#0" expanded="false" />
                 <element signature="method#findNeighbors#0;class#helpers#0" expanded="false" />
-                <element signature="e#978#987#0" expanded="true" />
-                <element signature="e#1915#1924#0" expanded="true" />
+                <element signature="e#982#991#0" expanded="true" />
+                <element signature="e#1923#1932#0" expanded="true" />
                 <element signature="method#NeighbourCount#0;class#helpers#0" expanded="false" />
                 <element signature="method#ReachabilityCount#0;class#helpers#0" expanded="false" />
-                <element signature="e#3729#3738#0" expanded="true" />
-                <element signature="e#3782#3791#0" expanded="true" />
-                <element signature="e#5703#5714#0" expanded="true" />
-                <element signature="e#5762#5771#0" expanded="true" />
+                <element signature="e#3737#3746#0" expanded="true" />
+                <element signature="e#3790#3799#0" expanded="true" />
+                <element signature="method#NetworkDiameter#0;class#helpers#0" expanded="false" />
+                <element signature="e#5711#5722#0" expanded="true" />
+                <element signature="e#5770#5779#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,6 +119,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -155,7 +158,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -265,6 +267,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -290,19 +305,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -402,7 +404,6 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889965" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -413,8 +414,9 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889965" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -435,7 +437,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="17" />
+      <option name="time" value="23" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -443,6 +445,43 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/NetworkAnalysis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
+          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JDBCutils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="630">
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helpers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2006" max-vertical-offset="2820">
+          <caret line="160" column="35" selection-start-line="160" selection-start-column="35" selection-end-line="160" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#NodeExists#0;class#helpers#0" expanded="false" />
+            <element signature="method#findNeighbors#0;class#helpers#0" expanded="false" />
+            <element signature="e#982#991#0" expanded="true" />
+            <element signature="e#1923#1932#0" expanded="true" />
+            <element signature="method#NeighbourCount#0;class#helpers#0" expanded="false" />
+            <element signature="method#ReachabilityCount#0;class#helpers#0" expanded="false" />
+            <element signature="e#3737#3746#0" expanded="true" />
+            <element signature="e#3790#3799#0" expanded="true" />
+            <element signature="method#NetworkDiameter#0;class#helpers#0" expanded="false" />
+            <element signature="e#5711#5722#0" expanded="true" />
+            <element signature="e#5770#5779#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/NetworkAnalysis.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="885">
@@ -465,15 +504,17 @@
           <caret line="74" column="121" selection-start-line="74" selection-start-column="121" selection-end-line="74" selection-end-column="121" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#NodeExists#0;class#helpers#0" expanded="false" />
             <element signature="method#findNeighbors#0;class#helpers#0" expanded="false" />
-            <element signature="e#978#987#0" expanded="true" />
-            <element signature="e#1915#1924#0" expanded="true" />
+            <element signature="e#982#991#0" expanded="true" />
+            <element signature="e#1923#1932#0" expanded="true" />
             <element signature="method#NeighbourCount#0;class#helpers#0" expanded="false" />
             <element signature="method#ReachabilityCount#0;class#helpers#0" expanded="false" />
-            <element signature="e#3729#3738#0" expanded="true" />
-            <element signature="e#3782#3791#0" expanded="true" />
-            <element signature="e#5703#5714#0" expanded="true" />
-            <element signature="e#5762#5771#0" expanded="true" />
+            <element signature="e#3737#3746#0" expanded="true" />
+            <element signature="e#3790#3799#0" expanded="true" />
+            <element signature="method#NetworkDiameter#0;class#helpers#0" expanded="false" />
+            <element signature="e#5711#5722#0" expanded="true" />
+            <element signature="e#5770#5779#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -500,15 +541,17 @@
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#NodeExists#0;class#helpers#0" expanded="false" />
             <element signature="method#findNeighbors#0;class#helpers#0" expanded="false" />
-            <element signature="e#978#987#0" expanded="true" />
-            <element signature="e#1915#1924#0" expanded="true" />
+            <element signature="e#982#991#0" expanded="true" />
+            <element signature="e#1923#1932#0" expanded="true" />
             <element signature="method#NeighbourCount#0;class#helpers#0" expanded="false" />
             <element signature="method#ReachabilityCount#0;class#helpers#0" expanded="false" />
-            <element signature="e#3729#3738#0" expanded="true" />
-            <element signature="e#3782#3791#0" expanded="true" />
-            <element signature="e#5703#5714#0" expanded="true" />
-            <element signature="e#5762#5771#0" expanded="true" />
+            <element signature="e#3737#3746#0" expanded="true" />
+            <element signature="e#3790#3799#0" expanded="true" />
+            <element signature="method#NetworkDiameter#0;class#helpers#0" expanded="false" />
+            <element signature="e#5711#5722#0" expanded="true" />
+            <element signature="e#5770#5779#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -570,19 +613,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/helpers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6620776" vertical-offset="791" max-vertical-offset="1590">
-          <caret line="169" column="21" selection-start-line="169" selection-start-column="21" selection-end-line="169" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.84981227" vertical-offset="41" max-vertical-offset="840">
+          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#NodeExists#0;class#helpers#0" expanded="false" />
             <element signature="method#findNeighbors#0;class#helpers#0" expanded="false" />
-            <element signature="e#978#987#0" expanded="true" />
-            <element signature="e#1915#1924#0" expanded="true" />
+            <element signature="e#982#991#0" expanded="true" />
+            <element signature="e#1923#1932#0" expanded="true" />
             <element signature="method#NeighbourCount#0;class#helpers#0" expanded="false" />
             <element signature="method#ReachabilityCount#0;class#helpers#0" expanded="false" />
-            <element signature="e#3729#3738#0" expanded="true" />
-            <element signature="e#3782#3791#0" expanded="true" />
-            <element signature="e#5703#5714#0" expanded="true" />
-            <element signature="e#5762#5771#0" expanded="true" />
+            <element signature="e#3737#3746#0" expanded="true" />
+            <element signature="e#3790#3799#0" expanded="true" />
+            <element signature="method#NetworkDiameter#0;class#helpers#0" expanded="false" />
+            <element signature="e#5711#5722#0" expanded="true" />
+            <element signature="e#5770#5779#0" expanded="true" />
           </folding>
         </state>
       </provider>

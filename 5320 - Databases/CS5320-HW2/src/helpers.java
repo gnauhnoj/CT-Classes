@@ -10,7 +10,7 @@ public class helpers {
     // query to confirm if the node is found in the graph
     private static boolean NodeExists (Statement stmt, Integer id) throws Exception {
         String query = "SELECT 1 FROM Nodes WHERE FromNode = " + id +
-                " union SELECT 1 FROM Nodes WHERE ToNode = " + id;
+                " union all SELECT 1 FROM Nodes WHERE ToNode = " + id;
         ResultSet rs = null;
         try {
             rs = stmt.executeQuery(query);
@@ -33,7 +33,7 @@ public class helpers {
             stmt.executeUpdate("USE Network");
 
             rs = stmt.executeQuery("select ToNode node from Nodes where FromNode = " + id +
-                    " union select FromNode node from Nodes where ToNode = " + id);
+                    " union all select FromNode node from Nodes where ToNode = " + id);
             while (rs.next()) {
                 list.add(rs.getInt("node"));
             }
@@ -156,8 +156,9 @@ public class helpers {
 
                 while (!q.isEmpty()) {
                     Integer[] curr = q.remove();
+                    // union all instead of union?
                     rs = stmt.executeQuery("select ToNode node from Nodes where FromNode = " + curr[0] +
-                            " union select FromNode node from Nodes where ToNode = " + curr[0]);
+                            " union all select FromNode node from Nodes where ToNode = " + curr[0]);
                     while (rs.next()) {
                         Integer t = rs.getInt("node");
                         if (!h.contains(t)) {
