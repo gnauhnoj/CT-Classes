@@ -142,17 +142,12 @@ public class helpers {
         int maxDepth = 0;
         ResultSet rs = null;
         try {
-//            rs = stmt.executeQuery("select * from unodes");
             ArrayList<Integer> list = getUniques();
 
             // for each node
             // use BFS to calculate the maximum shortest path for the network
-//            while (rs.next()) {
-
-            // undirected means you don't have to do for every node?
             for (Integer id: list) {
                 int depth = 0;
-//                Integer id = rs.getInt("node");
                 Queue<Integer[]> q = new LinkedList<Integer[]>();
                 Set<Integer> h = new HashSet<Integer>();
                 Integer[] node = {id, 0};
@@ -161,9 +156,6 @@ public class helpers {
 
                 while (!q.isEmpty()) {
                     Integer[] curr = q.remove();
-                    // this seems like it would be the most inefficient part - writing array list for each neighbor set
-                    // or query fewer times
-
                     rs = stmt.executeQuery("select ToNode node from Nodes where FromNode = " + curr[0] +
                             " union select FromNode node from Nodes where ToNode = " + curr[0]);
                     while (rs.next()) {
@@ -176,17 +168,6 @@ public class helpers {
                             q.add(newNode);
                         }
                     }
-
-//                    ArrayList<Integer> list = findNeighbors(curr[0]);
-//                    for (Integer t : list) {
-//                        if (!h.contains(t)) {
-//                            h.add(t);
-//                            int newDepth = curr[1] + 1;
-//                            depth = (depth < newDepth) ? newDepth : depth;
-//                            Integer[] newNode = {t, newDepth};
-//                            q.add(newNode);
-//                        }
-//                    }
                 }
                 // collect the maximum shortest path in the network
                 maxDepth = (maxDepth < depth) ? depth : maxDepth;
