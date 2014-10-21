@@ -142,7 +142,8 @@ public class helpers {
         int maxDepth = 0;
         ResultSet rs = null;
         try {
-g            ArrayList<Integer> list = getUniques();
+//            rs = stmt.executeQuery("select * from unodes");
+            ArrayList<Integer> list = getUniques();
 
             // for each node
             // use BFS to calculate the maximum shortest path for the network
