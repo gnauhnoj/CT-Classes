@@ -11,17 +11,12 @@ public class CreateDB {
         try {
             stmt.executeUpdate("DROP DATABASE " + db);
         } catch(Exception e){
-            System.out.print(e);
+//            System.out.print(e);
         }
         stmt.executeUpdate("CREATE DATABASE " + db);
         return stmt;
     }
     private static Statement createTable(Statement stmt, String table, String schemaQuery) throws Exception {
-//        try {
-//            stmt.executeUpdate("DROP TABLE " + table);
-//        } catch(Exception e){
-//            System.out.print("table already dropped");
-//        }
         stmt.executeUpdate(schemaQuery);
         return stmt;
     }
@@ -37,7 +32,6 @@ public class CreateDB {
                         " (FromNode int NOT NULL, " +
                         " ToNode int NOT NULL)";
 
-        // filename input needs to be like "/Users/jhh11/Copy/CT/5320\ -\ Databases/CS5320-HW2/lib/roadNet-CA.txt"
         String filename = args[0];
 
         try {
@@ -54,8 +48,16 @@ public class CreateDB {
                     "LINES TERMINATED BY '\\n' " +
                     "IGNORE 4 LINES");
 
-            stmt.executeUpdate("CREATE TABLE Undirected AS (select t1.fromNode, t1.toNode from " +
-                     "Nodes t1 join Nodes t2 on t1.fromNode = t2.toNode)");
+            stmt.executeUpdate("create index fromNode on nodes (fromNode)");
+            stmt.executeUpdate("create index toNode on nodes (toNode)");
+
+            stmt.executeUpdate("CREATE TABLE unodes AS " +
+                            "select fromNode node from nodes " +
+                            "union " +
+                            "select toNode node from nodes");
+
+            stmt.executeUpdate("create index node on unodes (node)");
+
         }
         catch (SQLException e) {e.printStackTrace();}
         catch (Exception e) {e.printStackTrace();}
