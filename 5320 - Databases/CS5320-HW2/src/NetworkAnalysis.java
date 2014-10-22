@@ -3,9 +3,7 @@
  */
 
 import java.sql.*;
-import java.util.Hashtable;
 import static java.lang.System.err;
-
 
 public class NetworkAnalysis {
     public static void main (String[] args) {

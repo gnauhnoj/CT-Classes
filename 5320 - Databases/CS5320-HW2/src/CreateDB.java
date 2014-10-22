@@ -11,7 +11,6 @@ public class CreateDB {
         try {
             stmt.executeUpdate("DROP DATABASE " + db);
         } catch(Exception e){
-//            System.out.print(e);
         }
         stmt.executeUpdate("CREATE DATABASE " + db);
         return stmt;
@@ -48,16 +47,18 @@ public class CreateDB {
                     "LINES TERMINATED BY '\\n' " +
                     "IGNORE 4 LINES");
 
+            // create indexes for data
             stmt.executeUpdate("create index fromNode on nodes (fromNode)");
             stmt.executeUpdate("create index toNode on nodes (toNode)");
 
+            // create list of unique nodes
             stmt.executeUpdate("CREATE TABLE unodes AS " +
                             "select fromNode node from nodes " +
                             "union " +
                             "select toNode node from nodes");
 
+            // create index for unique nodes
             stmt.executeUpdate("create index node on unodes (node)");
-
         }
         catch (SQLException e) {e.printStackTrace();}
         catch (Exception e) {e.printStackTrace();}

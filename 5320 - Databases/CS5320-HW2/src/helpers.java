@@ -7,76 +7,16 @@ import static java.lang.System.err;
  * Created by jhh11 on 10/18/14.
  */
 public class helpers {
-    // query to confirm if the node is found in the graph
-    private static boolean NodeExists (Statement stmt, Integer id) throws Exception {
-        String query = "SELECT 1 FROM Nodes WHERE FromNode = " + id +
-                " union all SELECT 1 FROM Nodes WHERE ToNode = " + id;
-        ResultSet rs = null;
-        try {
-            rs = stmt.executeQuery(query);
-        } finally {
-            Boolean result = rs.next();
-            try { if (rs != null) rs.close(); } catch (Exception e) {};
-            return result;
-        }
-    }
-    // query which returns an arraylist of all neighbors to a given node
-    private static ArrayList<Integer> findNeighbors (Integer id) throws Exception {
-        Connection con = null;
-        Statement stmt = null;
-        ResultSet rs = null;
-        ArrayList<Integer> list = new ArrayList<Integer>();
-
-        try {
-            con = JDBCutils.getConnection();
-            stmt = con.createStatement();
-            stmt.executeUpdate("USE Network");
-
-            rs = stmt.executeQuery("select ToNode node from Nodes where FromNode = " + id +
-                    " union all select FromNode node from Nodes where ToNode = " + id);
-            while (rs.next()) {
-                list.add(rs.getInt("node"));
-            }
-        }
-        catch (SQLException e) {e.printStackTrace();}
-        catch (Exception e) {e.printStackTrace();}
-        finally {
-            JDBCutils.closeConnection(rs, stmt, con);
-        }
-        return list;
-    }
-    // query which returns an arraylist of all unique nodes in the network
-    private static ArrayList<Integer> getUniques() throws Exception {
-        Connection con = null;
-        Statement stmt = null;
-        ResultSet rs = null;
-        ArrayList<Integer> list = new ArrayList<Integer>();
-
-        try {
-            con = JDBCutils.getConnection();
-            stmt = con.createStatement();
-            stmt.executeUpdate("USE Network");
-
-            rs = stmt.executeQuery("select * from unodes");
-            while (rs.next()) {
-                list.add(rs.getInt("node"));
-            }
-        }
-        catch (SQLException e) {e.printStackTrace();}
-        catch (Exception e) {e.printStackTrace();}
-        finally {
-            JDBCutils.closeConnection(rs, stmt, con);
-        }
-        return list;
-    }
+    // count the number of neighbors to a node
     public static Statement NeighbourCount (Statement stmt, Integer id) throws Exception{
         if (id == null) {
             err.format("Usage: java NetworkAnalysis NeighbourCount <input>%n");
         } else {
-            if (!NodeExists(stmt, id)) {
+            if (!subHelpers.NodeExists(stmt, id)) {
                 System.out.println("-1");
             } else {
                 ResultSet rs = null;
+                // count distinct neighbors to a node
                 String query = "select count(*) count from (select ToNode node from Nodes where FromNode = " + id +
                         " union select FromNode node from Nodes where ToNode = " + id + " ) nodes";
                 try {
@@ -92,10 +32,13 @@ public class helpers {
         }
         return stmt;
     }
+    // determine the reachability of a node through breadth first search of all neighbors in a directed graph
     public static Statement ReachabilityCount (Statement stmt, Integer id) throws Exception{
         if (id == null) {
             err.format("Usage: java NetworkAnalysis ReachabilityCount <input>%n");
         } else {
+            // breadth first search following a directed path from the given node
+            // counts how many unique nodes are accessed
             Queue<Integer> q = new LinkedList<Integer>();
             Set<Integer> h = new HashSet<Integer>();
             int count = 0;
@@ -104,12 +47,11 @@ public class helpers {
 
             while (!q.isEmpty()) {
                 Integer curr = q.remove();
-                if (count == 0 && !NodeExists(stmt, curr)) {
+                if (count == 0 && !subHelpers.NodeExists(stmt, curr)) {
                     count = -1;
                 } else {
                     ResultSet rs = null;
                     String query = "select ToNode from Nodes where FromNode = " + curr;
-
                     try {
                         rs = stmt.executeQuery(query);
                         while (rs.next()) {
@@ -129,26 +71,43 @@ public class helpers {
         }
         return stmt;
     }
+    // method to find cliques of size k in a network
     public static Statement DiscoverCliques (Statement stmt, Integer k) throws Exception{
-        // select t1.fromNode, t1.toNode from roadNodes t1 join roadNodes t2 on t1.fromNode = t2.toNode;  make undirected
         if (k == null) {
             err.format("Usage: java NetworkAnalysis DiscoverCliques <input>%n");
         } else {
+            ResultSet rs = null;
+            try {
+                stmt = subHelpers.createNeighborTable(stmt);
+                stmt = subHelpers.createCliqueTable(stmt, k);
+                Integer limit = k-1;
+                // find nodes with at least k-1 neighbors
+                rs = stmt.executeQuery("select FromNode, count(toNode) count from neighbors group by + " +
+                        "fromNode having count >= " + limit + " order by FromNode");
+                // for each of these nodes search for possible cliques
+                while (rs.next()) {
+                    Integer curr = rs.getInt("FromNode");
+                    ArrayList<Integer> list = new ArrayList<Integer>();
+                    subHelpers.findClique(curr, k, list);
+                }
+            } finally {
+                try { if (rs != null) rs.close(); } catch (Exception e) {};
+            }
 
         }
         return stmt;
     }
+    // method to find the Network diameter
     public static Statement NetworkDiameter (Statement stmt) throws Exception{
         int maxDepth = 0;
         ResultSet rs = null;
         try {
-            ArrayList<Integer> list = getUniques();
-
-            // for each node
-            // use BFS to calculate the maximum shortest path for the network
+            ArrayList<Integer> list = subHelpers.getUniques();
+            // for each node - use BFS to calculate the maximum shortest path for the network
             for (Integer id: list) {
                 int depth = 0;
                 Queue<Integer[]> q = new LinkedList<Integer[]>();
+                // potential optimization: store this hash in a database instead?
                 Set<Integer> h = new HashSet<Integer>();
                 Integer[] node = {id, 0};
                 h.add(id);
@@ -156,7 +115,6 @@ public class helpers {
 
                 while (!q.isEmpty()) {
                     Integer[] curr = q.remove();
-                    // union all instead of union?
                     rs = stmt.executeQuery("select ToNode node from Nodes where FromNode = " + curr[0] +
                             " union all select FromNode node from Nodes where ToNode = " + curr[0]);
                     while (rs.next()) {

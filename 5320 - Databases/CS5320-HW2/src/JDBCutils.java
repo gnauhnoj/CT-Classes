@@ -14,8 +14,6 @@ public class JDBCutils {
 
         Class.forName(driver);
         Connection con = DriverManager.getConnection(url + dbName, userName, password);
-//        System.out.println("URL: " + url + dbName);
-//        System.out.println("Connection: " + con);
         return con;
     }
 

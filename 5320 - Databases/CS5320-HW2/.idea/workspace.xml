@@ -23,45 +23,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="NetworkAnalysis.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/NetworkAnalysis.java">
+      <file leaf-file-name="README.txt" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="885">
-              <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.4389313" vertical-offset="0" max-vertical-offset="786">
+              <caret line="23" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JDBCutils.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/JDBCutils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="630">
-              <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="helpers.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/helpers.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.84981227" vertical-offset="41" max-vertical-offset="840">
-              <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#NodeExists#0;class#helpers#0" expanded="false" />
-                <element signature="method#findNeighbors#0;class#helpers#0" expanded="false" />
-                <element signature="e#982#991#0" expanded="true" />
-                <element signature="e#1923#1932#0" expanded="true" />
-                <element signature="method#NeighbourCount#0;class#helpers#0" expanded="false" />
-                <element signature="method#ReachabilityCount#0;class#helpers#0" expanded="false" />
-                <element signature="e#3737#3746#0" expanded="true" />
-                <element signature="e#3790#3799#0" expanded="true" />
-                <element signature="method#NetworkDiameter#0;class#helpers#0" expanded="false" />
-                <element signature="e#5711#5722#0" expanded="true" />
-                <element signature="e#5770#5779#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -84,7 +51,9 @@
         <option value="$PROJECT_DIR$/src/CreateDB.java" />
         <option value="$PROJECT_DIR$/src/JDBCutils.java" />
         <option value="$PROJECT_DIR$/src/NetworkAnalysis.java" />
+        <option value="$PROJECT_DIR$/src/subHelpers.java" />
         <option value="$PROJECT_DIR$/src/helpers.java" />
+        <option value="$PROJECT_DIR$/README.txt" />
       </list>
     </option>
   </component>
@@ -118,7 +87,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -130,6 +98,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.8 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -158,6 +130,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -267,19 +240,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -305,6 +265,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -379,6 +352,11 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -415,8 +393,8 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889965" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -437,7 +415,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="23" />
+      <option name="time" value="38" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -449,7 +427,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
           <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -467,17 +447,14 @@
           <caret line="160" column="35" selection-start-line="160" selection-start-column="35" selection-end-line="160" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#NodeExists#0;class#helpers#0" expanded="false" />
-            <element signature="method#findNeighbors#0;class#helpers#0" expanded="false" />
-            <element signature="e#982#991#0" expanded="true" />
-            <element signature="e#1923#1932#0" expanded="true" />
             <element signature="method#NeighbourCount#0;class#helpers#0" expanded="false" />
             <element signature="method#ReachabilityCount#0;class#helpers#0" expanded="false" />
-            <element signature="e#3737#3746#0" expanded="true" />
-            <element signature="e#3790#3799#0" expanded="true" />
-            <element signature="method#NetworkDiameter#0;class#helpers#0" expanded="false" />
-            <element signature="e#5711#5722#0" expanded="true" />
-            <element signature="e#5770#5779#0" expanded="true" />
+            <element signature="e#1778#1787#0" expanded="true" />
+            <element signature="e#1831#1840#0" expanded="true" />
+            <element signature="method#DiscoverCliques#0;class#helpers#0" expanded="false" />
+            <element signature="e#3913#3922#0" expanded="true" />
+            <element signature="e#4621#4632#0" expanded="true" />
+            <element signature="e#4762#4771#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -486,7 +463,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="885">
           <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -504,17 +483,14 @@
           <caret line="74" column="121" selection-start-line="74" selection-start-column="121" selection-end-line="74" selection-end-column="121" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#NodeExists#0;class#helpers#0" expanded="false" />
-            <element signature="method#findNeighbors#0;class#helpers#0" expanded="false" />
-            <element signature="e#982#991#0" expanded="true" />
-            <element signature="e#1923#1932#0" expanded="true" />
             <element signature="method#NeighbourCount#0;class#helpers#0" expanded="false" />
             <element signature="method#ReachabilityCount#0;class#helpers#0" expanded="false" />
-            <element signature="e#3737#3746#0" expanded="true" />
-            <element signature="e#3790#3799#0" expanded="true" />
-            <element signature="method#NetworkDiameter#0;class#helpers#0" expanded="false" />
-            <element signature="e#5711#5722#0" expanded="true" />
-            <element signature="e#5770#5779#0" expanded="true" />
+            <element signature="e#1778#1787#0" expanded="true" />
+            <element signature="e#1831#1840#0" expanded="true" />
+            <element signature="method#DiscoverCliques#0;class#helpers#0" expanded="false" />
+            <element signature="e#3913#3922#0" expanded="true" />
+            <element signature="e#4621#4632#0" expanded="true" />
+            <element signature="e#4762#4771#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -531,7 +507,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="795">
           <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -541,17 +519,14 @@
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#NodeExists#0;class#helpers#0" expanded="false" />
-            <element signature="method#findNeighbors#0;class#helpers#0" expanded="false" />
-            <element signature="e#982#991#0" expanded="true" />
-            <element signature="e#1923#1932#0" expanded="true" />
             <element signature="method#NeighbourCount#0;class#helpers#0" expanded="false" />
             <element signature="method#ReachabilityCount#0;class#helpers#0" expanded="false" />
-            <element signature="e#3737#3746#0" expanded="true" />
-            <element signature="e#3790#3799#0" expanded="true" />
-            <element signature="method#NetworkDiameter#0;class#helpers#0" expanded="false" />
-            <element signature="e#5711#5722#0" expanded="true" />
-            <element signature="e#5770#5779#0" expanded="true" />
+            <element signature="e#1778#1787#0" expanded="true" />
+            <element signature="e#1831#1840#0" expanded="true" />
+            <element signature="method#DiscoverCliques#0;class#helpers#0" expanded="false" />
+            <element signature="e#3913#3922#0" expanded="true" />
+            <element signature="e#4621#4632#0" expanded="true" />
+            <element signature="e#4762#4771#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -587,48 +562,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CreateDB.java">
+    <entry file="file://$PROJECT_DIR$/src/JDBCutils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68085104" vertical-offset="131" max-vertical-offset="1080">
-          <caret line="47" column="48" selection-start-line="45" selection-start-column="31" selection-end-line="48" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.09386733" vertical-offset="0" max-vertical-offset="799">
+          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/NetworkAnalysis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="825">
-          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.844806" vertical-offset="0" max-vertical-offset="825">
+          <caret line="47" column="39" selection-start-line="47" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CreateDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="296" max-vertical-offset="1095">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JDBCutils.java">
+    <entry file="file://$PROJECT_DIR$/src/subHelpers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-          <folding />
+        <state vertical-scroll-proportion="0.41301626" vertical-offset="0" max-vertical-offset="799">
+          <caret line="109" column="44" selection-start-line="109" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#NodeExists#0;class#subHelpers#0" expanded="false" />
+            <element signature="method#findClique#0;class#subHelpers#0" expanded="false" />
+            <element signature="e#1654#1663#0" expanded="true" />
+            <element signature="e#2994#3003#0" expanded="true" />
+            <element signature="e#4587#4596#0" expanded="true" />
+            <element signature="method#createNeighborTable#0;class#subHelpers#0" expanded="false" />
+            <element signature="method#createCliqueTable#0;class#subHelpers#0" expanded="false" />
+            <element signature="method#verifyClique#0;class#subHelpers#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/helpers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84981227" vertical-offset="41" max-vertical-offset="840">
-          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.22277847" vertical-offset="122" max-vertical-offset="930">
+          <caret line="104" column="49" selection-start-line="104" selection-start-column="49" selection-end-line="104" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#NodeExists#0;class#helpers#0" expanded="false" />
-            <element signature="method#findNeighbors#0;class#helpers#0" expanded="false" />
-            <element signature="e#982#991#0" expanded="true" />
-            <element signature="e#1923#1932#0" expanded="true" />
             <element signature="method#NeighbourCount#0;class#helpers#0" expanded="false" />
             <element signature="method#ReachabilityCount#0;class#helpers#0" expanded="false" />
-            <element signature="e#3737#3746#0" expanded="true" />
-            <element signature="e#3790#3799#0" expanded="true" />
-            <element signature="method#NetworkDiameter#0;class#helpers#0" expanded="false" />
-            <element signature="e#5711#5722#0" expanded="true" />
-            <element signature="e#5770#5779#0" expanded="true" />
+            <element signature="e#1778#1787#0" expanded="true" />
+            <element signature="e#1831#1840#0" expanded="true" />
+            <element signature="method#DiscoverCliques#0;class#helpers#0" expanded="false" />
+            <element signature="e#3913#3922#0" expanded="true" />
+            <element signature="e#4621#4632#0" expanded="true" />
+            <element signature="e#4762#4771#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4389313" vertical-offset="0" max-vertical-offset="786">
+          <caret line="23" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
